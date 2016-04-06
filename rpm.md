@@ -1,6 +1,6 @@
-#rpm autoreq
+##rpm autoreq
 
-##问题
+###问题
 
 安装rpm包时，系统缺少了某个库文件，例如libudev.so.0,但是系统中存在libudev.so.1。
 解决:
@@ -37,7 +37,7 @@ libselinux.so.1()(64bit)
 ###参考
 官网wiki  [Maximum RPM](http://www.rpm.org/max-rpm-snapshot/s1-rpm-depend-auto-depend.html)
 
-==以下截取WIKI==
+**以下截取WIKI**
 ####The autoreqprov, autoreq, and autoprov Tags — Disable Automatic Dependency Processing
 
 There may be times when RPM's automatic dependency processing is not desired. In these cases, the autoreqprov, autoreq, and autoprov tags may be used to disable it. This tag takes a **yes/no** or **0/1** value. For example, to disable automatic dependency processing, the following line may be used:
