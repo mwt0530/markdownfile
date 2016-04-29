@@ -13,7 +13,7 @@
 # tar xvf haroopad-v0.13.1-x64.tar.gz -C haroopad
 # tar xvf data.tar.gz -C /
 ```
->制作rpm包时需要用到ibudev.so.0出现错误
+>制作rpm包时需要用到ibudev.so.0出现错误,参考rpm.md解决。
 
 ## 修改libudev
 centos7中没有libudev.so.0，可以创建软连接实现。
@@ -24,7 +24,3 @@ CLI运行命令
 `# haroopad`
 >可以给程序加快捷键
 
-- [ 111 ]  11111
-- [ 111 ] qaaa
-- [ 222 ] ddd
-[baidu](http://www.baidu.com "baidu")

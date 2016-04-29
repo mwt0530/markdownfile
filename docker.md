@@ -4,6 +4,7 @@
 * [docker启动](#start)
 * [docker使用](#use)
 * [dockerfile](#dockerfile)
+* [docker存储](#dockerstorage)
 
 <a name="install"/>
 ####docker安装
@@ -152,3 +153,17 @@ CMD  vs ENTRYPOINT
 3.	CMD should be used as a way of defining default arguments for an ENTRYPOINT command or for executing an ad-hoc command in a container.
 
 4.	CMD will be overridden when running the container with alternative arguments.
+
+
+<a name="dockerstorage"/>
+####docker存储
+devicemapper，在centos虚拟机中不能启动docker，使用自己创建的lvm
+
+```
+# lvs
+# vgs
+# lvcreate -L 10G -n dockerpool centos
+# lvcreate -L 4G -n dockermetadata centos
+# docker daemon --storage-driver=devicemapper --storage-opt dm.datadev=/dev/centos/dockerpool --storage-opt dm.metadatadev=/dev/centos/dockermetadata &
+
+```

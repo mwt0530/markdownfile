@@ -31,7 +31,7 @@ The kernel will stop and wait as early as the I/O driver and architecture allows
 ####gdb连接
 在启动虚拟机后会停止显示kgdb waiting for connection from remote gdb...字样。
 ```
-gdb vmliux  //带符号的镜像
+gdb vmlinux  //带符号的镜像
 set remotebaud 115200
 target remote :6666
 ```
