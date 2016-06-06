@@ -80,7 +80,7 @@ docker run -it mwt0530/mywhale:v2 /bin/bash
 
 - Data volumes
 数据卷不依赖于docker的文件系统类型Union file systems, or UnionFS，目的就是在各容器之间保存和分享数据，即使容器被删除，数据卷会被保留。
-	1. 	添加单个新数据卷
+	- 单个新数据卷
 	```
     # docker run -d -P --name web -v /webapp training/webapp python app.py
     ```
@@ -89,18 +89,18 @@ docker run -it mwt0530/mywhale:v2 /bin/bash
     # docker inspect web
     ```
 	Mounts部分对应路径就是本地对应保存地点`/var/lib/docker/volumes`
-	2.	本地目录作为数据卷
+	- 目录作为数据卷
 	```
     # docker run -d -P --name web -v /opt/mnt:/opt/webapp training/webapp python app.py
     ```
     将本地`/opt/mnt`内容mount到容器的`/opt/webapp`上,容器路径必须绝对路径，本地路径可以使用绝对或者相对路径，区别在于：
     	- /opt/mnt:/opt/webapp ---直接mount
     	- opt/mnt:/opt/webapp---Docker creates a named volume by that name,`/var/lib/docker/volumes/opt/mnt/`
-	3.	mount一个本地文件到容器
+	- ount一个本地文件到容器
 	```
     # docker run --rm -it -P --name web -v ~/.bash_history:/root/.bash_history docker.io/training/webapp /bin/bash
     ```
-    4.	Creating and mounting a data volume container数据卷容器
+    - eating and mounting a data volume container数据卷容器
 	```
     # docker create XXXXXXXX
     # docker run --volumes-from XXXXX
