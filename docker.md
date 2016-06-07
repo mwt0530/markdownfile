@@ -94,13 +94,13 @@ docker run -it mwt0530/mywhale:v2 /bin/bash
     # docker run -d -P --name web -v /opt/mnt:/opt/webapp training/webapp python app.py
     ```
     将本地`/opt/mnt`内容mount到容器的`/opt/webapp`上,容器路径必须绝对路径，本地路径可以使用绝对或者相对路径，区别在于：
-    	- /opt/mnt:/opt/webapp ---直接mount
-    	- opt/mnt:/opt/webapp---Docker creates a named volume by that name,`/var/lib/docker/volumes/opt/mnt/`
-	- ount一个本地文件到容器
+    	1. /opt/mnt:/opt/webapp ---直接mount
+    	2. opt/mnt:/opt/webapp---Docker creates a named volume by that name,`/var/lib/docker/volumes/opt/mnt/`
+	- Mount一个本地文件到容器
 	```
     # docker run --rm -it -P --name web -v ~/.bash_history:/root/.bash_history docker.io/training/webapp /bin/bash
     ```
-    - eating and mounting a data volume container数据卷容器
+    - Ceating and mounting a data volume container数据卷容器
 	```
     # docker create XXXXXXXX
     # docker run --volumes-from XXXXX
