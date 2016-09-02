@@ -3,6 +3,7 @@ https://www.j4tools.org/index.html  i3wm插件
 http://dotshare.it/ i3wm环境配置  
 http://fontawesome.io/cheatsheet/   图标  
 http://vimawesome.com/  
+http://vimcolors.com/  
 http://www.cs.usfca.edu/~galles/visualization/Algorithms.html  数据结构视化  
 
 
