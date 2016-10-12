@@ -5,6 +5,7 @@
 * [docker使用](#use)
 * [dockerfile](#dockerfile)
 * [docker存储](#dockerstorage)
+* [docker问题](#dockerproblem)
 
 <a name="install"/>
 ####docker安装
@@ -167,3 +168,16 @@ devicemapper，在centos虚拟机中不能启动docker，使用自己创建的lv
 # docker daemon --storage-driver=devicemapper --storage-opt dm.datadev=/dev/centos/dockerpool --storage-opt dm.metadatadev=/dev/centos/dockermetadata &
 
 ```
+
+<a name="dockerproblem"/>
+####docker问题
+1. centos7启动docker失败问题
+```
+Docker service fails to start with error: relocation error: /usr/bin/docker: symbol dm_task_get_info_with_deferred_remove, version Base not defined in file libdevmapper.so.1.02 with link time reference
+```
+问题：lib-device-mapper that you have isn't exporting a symbol ("Base") that Docker needs
+解决：找到docker对应的系统版本，用updates源升级devicemapper
+参考：
+http://stackoverflow.com/questions/27216473/docker-1-3-fails-to-start-on-rhel6-5/27216873#27216873
+http://www.firefoxbug.com/index.php/archives/2807/
+
