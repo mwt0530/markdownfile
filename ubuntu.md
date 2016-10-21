@@ -27,4 +27,7 @@ lxappearance
 rofi
 volumeicon
 pavucontrol
+bless
+you-get
+extundelete
 ```
