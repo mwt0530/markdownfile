@@ -18,3 +18,4 @@ http://www.lenky.info/  linux相关
 http://www.ixxoo.me/    linux 前端  
 http://kukuruku.co/ 语言，数据结构，系统  
 https://blog.jessfraz.com/ docker  
+http://ilinuxkernel.com  Linux内核、存储  
